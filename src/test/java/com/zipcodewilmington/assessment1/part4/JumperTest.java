@@ -58,7 +58,7 @@ public class JumperTest {
     public void solution5(){
         // Should assert to true
         Jumper jumper = new Jumper();
-        Integer expected = jumper.jumps(823564441,823564441);
+        Integer expected = jumper.jumps(823564441,115438166);
         Integer actual = 15497286;
         Assert.assertEquals(expected, actual);
 
