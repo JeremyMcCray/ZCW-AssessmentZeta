@@ -4,6 +4,8 @@ package com.zipcodewilmington.assessment1.part1;
  * Created by leon on 2/16/18.
  */
 public class BasicArrayUtils {
+
+
     /**
      * @param stringArray an array of String objects
      * @return the first element in the array
