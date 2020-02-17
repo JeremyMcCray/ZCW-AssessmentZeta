@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part1;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -37,8 +39,22 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-        return null;
-    }
+        String ans = "";
+        String ans1 = "";
+        for (int i = str.length()-1; i >= 0 ; i--) {
+            ans += str.charAt(i);
+        }
+        Character b = Character.toUpperCase(ans.charAt(0));
+        ans1 +=b;
+        for (int i = 1; i < ans.length(); i++) {
+            ans1+=ans.charAt(i);
+        }
+
+        return ans1;
+
+        }
+
+
 
 
     /**
@@ -46,7 +62,7 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+        return str.substring(1,str.length()-1);
     }
 
     /**
@@ -54,6 +70,19 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
-        return null;
+        String ans = "";
+        for (int i = 0; i < str.length() ; i++) {
+            Character charAtTime = ' ';
+            charAtTime = str.charAt(i);
+           Boolean c1 = Character.isUpperCase(charAtTime);
+            if(c1==true){
+               ans+= charAtTime.toString().toLowerCase();
+
+            } else{
+              ans+=  charAtTime.toString().toUpperCase();
+
+            }
+        }
+        return ans;
     }
 }
